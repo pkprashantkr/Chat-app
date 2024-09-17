@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional custom global styles */
+body {
+  @apply bg-gray-100 text-gray-900;
+  font-family: "Inter", sans-serif; /* Modern font for better readability */
+}
+
+h1 {
+  @apply text-3xl font-bold text-center;
+}
+
+input::placeholder {
+  @apply text-gray-400;
+}
+
+.chat-window {
+  /* Ensure chat window has a max height and fits the screen */
+  @apply h-auto;
+}
+
+.chat-body {
+  /* Scrollbar styling (optional) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.6) rgba(229, 231, 235, 0.4);
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background-color: rgba(229, 231, 235, 0.4);
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.6);
+  border-radius: 4px;
+}
+
+button {
+  @apply transition duration-300 ease-in-out;
+}
+
+input:focus,
+button:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-blue-500;
+}
+
+input {
+  @apply transition-all duration-200 ease-in-out;
+}
